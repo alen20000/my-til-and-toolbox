@@ -8,8 +8,8 @@
 # TIL
 > 個人備忘&快速除錯&經驗管理
 
-*[conda](#conda)
-*[dev-ops](#dev-ops)
+* [conda](#conda)
+* [dev-ops](#dev-ops)
 ---
 ### conda
 - [basic-operation](TIL/conda/basic-operation.md)
