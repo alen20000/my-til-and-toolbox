@@ -16,3 +16,6 @@
 ---
 ### dev-ops
 - [auto-activate-venv](TIL/dev-ops/auto-activate-venv.md)
+---
+### dev-ops algorithm
+- [QuickSort](TIL/algorithm/QuickSort.md)
