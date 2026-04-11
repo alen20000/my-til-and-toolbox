@@ -4,8 +4,10 @@
 
 TS:
 O(n2)~ O(nlogn) ; Ave:O(nlogn)
+
 SC:
 O(n2)~ O(logn)  ; Pilot 選的不均，效果就不好
+
 ```
 #include <iostream>
 #include <vector>
