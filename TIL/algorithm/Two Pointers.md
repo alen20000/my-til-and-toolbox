@@ -1,3 +1,4 @@
+# BinarySearch
 Leetcode 26. Remove Duplicates from Sorted Array
 
 雙指針，原本設想用雙指針從左右縮回，把匹配不對的數字丟到後面，左右側指針交互後跳出迴圈，但失敗了。
