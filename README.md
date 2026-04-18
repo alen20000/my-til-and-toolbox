@@ -7,7 +7,7 @@
 ----
 
 ## TIL
-> 個人備忘&快速除錯&經驗管理
+>>>> 個人備忘&快速除錯&經驗管理&第二大腦
 
 * [conda](#conda)
 * [dev-ops](#dev-ops)
@@ -23,5 +23,8 @@
 - [KMP_algorithm](TIL/algorithm/KMP_algorithm.md)
 - [QuickSort](TIL/algorithm/QuickSort.md)
 - [TwoPointers](TIL/algorithm/TwoPointers.md)
-### Syntax
-- [Syntax](TIL/Syntax/C++SyntaxNotes.md)
+### syntax
+- [syntax](TIL/syntax/C++SyntaxNotes.md)
+
+### web-backen
+- [Flask](TIL/web-backen/flask/Flask.md)
