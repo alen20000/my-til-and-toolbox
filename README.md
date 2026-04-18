@@ -6,7 +6,7 @@
 |**md_list_generator**|配合github表單用的 md連結格式生成器|
 ----
 
-# TIL
+## TIL
 > 個人備忘&快速除錯&經驗管理
 
 * [conda](#conda)
@@ -19,7 +19,8 @@
 - [auto-activate-venv](TIL/dev-ops/auto-activate-venv.md)
 ---
 ### algorithm
-- [QuickSort](TIL/algorithm/QuickSort.md)
 - [BinarySearch](TIL/algorithm/BinarySearch.md)
+- [KMP algorithm](TIL/algorithm/KMP algorithm.md)
+- [QuickSort](TIL/algorithm/QuickSort.md)
 ### Syntax
 - [Syntax](TIL/Syntax/C++SyntaxNotes.md)
