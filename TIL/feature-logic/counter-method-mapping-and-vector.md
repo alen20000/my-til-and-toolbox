@@ -1,4 +1,4 @@
-Problem #21   Array Counters
+* [Problem Link](https://www.codeabbey.com/index/task_view/array-counters)
  
 note: 這題解的時候想太多，提交後發現好像用不到雜湊，有點過渡了。<br> 主要重點，容器空間要分配；hash表的C++語法，只要判斷有沒有在就好，不是像python用 `==`去做比較容器與元素。
 
