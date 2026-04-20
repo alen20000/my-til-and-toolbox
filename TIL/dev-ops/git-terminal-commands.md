@@ -6,10 +6,21 @@
 
 ```git config user.email``` - 檢視本機的git mail setting
 
-### mail設定
+### 基礎設定
 ```git config --global user.email "xxx@mail.com"```
 -設定要配合github上帳號的mail，才會收到綠色框框的打卡紀錄
 
+```git config --global user.name "alen20000"```
+-設定本機的git name
+
+補充:訊息去github看自己的最準。
+點擊網頁右上角你的頭像。
+
+點選 Settings（設定）。
+
+在左側選單找到 Emails。
+
+右邊畫面看到 Primary email address，那個就是自己的信箱。
 
 ## 查詢log
 ```git log``` - 查看提交的commit record
