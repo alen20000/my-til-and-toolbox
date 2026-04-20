@@ -1,7 +1,7 @@
 ## 身分環境設定
 
 
-### check now setting
+### Check now setting
 ```git config --list``` - 顯示本機的全部git設定
 
 ```git config user.email``` - 檢視本機的git mail setting
@@ -21,6 +21,20 @@
 在左側選單找到 Emails。
 
 右邊畫面看到 Primary email address，那個就是自己的信箱。
+
+以下是重設心得:最近電腦送修 用備用電腦寫repo 遇到git權限問題
+現在git很聰明了，很方便。
+```
+1. 先在瀏覽器登入 github
+
+2. 設定好上方兩個資訊
+
+3. clone一個repo 在Push
+
+4. push repo，會卡住然後會跳一個視窗
+
+5. 點擊「Sign in with your browser」，開始在瀏覽器授權，顯示成功後，push自動上去
+```
 
 ## 查詢log
 ```git log``` - 查看提交的commit record
