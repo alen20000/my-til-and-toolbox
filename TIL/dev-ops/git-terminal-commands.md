@@ -50,6 +50,11 @@
 ## 糾正指令
 ```git rm --cached <檔案名稱>``` - 有時候，檔案push上去，但後來才加到ignore，這時檔案還會在git上，要用這指令刪除本機的git快取，在push一次，git上的repo的該檔才會消失。
 
+```git reset``` - 應用在，不小心 git add  ，但是還沒有 commit 時
+```git reset HEAD~1``` -接續上行，若不小心commit了，就用這指令整個退回
+
+```git commit --amend -m "新的 commit 訊息"``` - 用於修正最後一次 commit，他會直接覆蓋最後一次commit
+
 
 ## 還原指令
 git還原是以每次 commit 為版本分點，範圍是整個專案資料夾，意思是，就算你某次commit 一個模組，但回原會作用在當時你分點的所有檔案。
