@@ -5,9 +5,12 @@
 Flask 預設會自動尋找以下名稱的資料夾，建議遵循此規範，應該也是網頁開發社群的約定習慣
   * `template` 資料夾:render_template() 會來這裡找 HTML
   * `static` 資料夾:js放在外部的話，要加{{ url_for('static', filename='index.js') }}，來指定位置，如下方代碼
- 
+  * `{{ ... }} (雙大括號)`這是 Jinja2 模板引擎的記號。它告訴 Flask：「這裡面不是普通文字，是程式指令，請執行完後再把結果印出來
+  * `url_for()`這是 Flask 內建的「導航函式」。它的工作是根據資料夾名稱找到對應的路徑
+  * `'static'`這是告訴 url_for 去尋找名為 static 的資料夾（Flask 預設存放 JS、CSS、圖片的地方）。
+  * `filename='index.js'` 明確指定在 static 資料夾內的哪一個檔案。
 ```
-<script src="index.js"></script>
+
 <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 </html>
