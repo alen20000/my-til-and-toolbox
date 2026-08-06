@@ -23,3 +23,8 @@ args:
 - /f 顯示各資料夾中名稱
 - /a: 使用 ASCII 字元（避免終端機編碼亂碼）
 ```
+可以加輸出指令，把內容複製到路徑文本。
+[!] C槽保護設計，不能輸出至C槽
+```
+tree D:\Projects\Cat-Assets\TIL /f /a > D:tree-shape.txt
+```
