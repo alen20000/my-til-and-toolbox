@@ -74,3 +74,10 @@ git還原是以每次 commit 為版本分點，範圍是整個專案資料夾，
 3 - 整個刪除:返回點到目前的點的commit紀錄全刪除，找不回來。
 ```git reset --hard <版本號>``` - 指令原樣
 ```git reset --hard HEAD~1``` - 回到上一版本
+
+
+### repo分支指令
+
+```git switch -c [branch_name]``` - 建立新分支並轉跳過去。
+
+```git branch``` - 轉跳後輸入這個檢查
