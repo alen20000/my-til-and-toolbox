@@ -81,3 +81,10 @@ git還原是以每次 commit 為版本分點，範圍是整個專案資料夾，
 ```git switch -c [branch_name]``` - 建立新分支並轉跳過去。
 
 ```git branch``` - 轉跳後輸入這個檢查
+
+
+### 開分支流程
+
+* 先檢查目前分支 `git checkout`
+* 建立新分支並跳轉 `git checkout -b your-new-branch-name` ， -b 建立並切換到之意
+* 推送新分支至github `git push -u origin your-new-branch-name`
