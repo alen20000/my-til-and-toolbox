@@ -76,15 +76,16 @@ git還原是以每次 commit 為版本分點，範圍是整個專案資料夾，
 ```git reset --hard HEAD~1``` - 回到上一版本
 
 
-### repo分支指令
-
-```git switch -c [branch_name]``` - 建立新分支並轉跳過去。
-
-```git branch``` - 轉跳後輸入這個檢查
-
-
 ### 開分支流程
 
 * 先檢查目前分支 `git checkout`
 * 建立新分支並跳轉 `git checkout -b your-new-branch-name` ， -b 建立並切換到之意
 * 推送新分支至github `git push -u origin your-new-branch-name`
+
+### 分支進度要替主支
+
+* 備份並跳轉 `git checkout -b <備份分支名稱>`
+* 檢查 `git branch`
+* 推送雲端 `git push origin <備份分支名稱>` 
+* 切換到主支 `git checkout main`
+* 強制push `git push origin <你的分支名稱>:main --force`
