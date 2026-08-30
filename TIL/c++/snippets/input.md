@@ -20,3 +20,19 @@ if (!(std::cin >> choice)) {
 }
 ```
 * Note: 記著，cin之類的操作，就貼上這兩行
+
+
+## 控制台打印中文
+
+* 問題：在 C++ 裡用 std::cout 或寬字元印中文時，畫面上直接一片空白，而且編譯器完全不報錯。
+
+* 原因：Windows 預設的終端機編碼不是 UTF-8，且 C++ 的全域地區設定（locale）預設不支援中文寬字元。
+
+* 方法*：在 main 函式最前面加上這兩行：
+```
+// 強制切換 Windows 主控台為 UTF-8 編碼
+system("chcp 65001 > nul");
+
+// 設定全域地區支援繁體中文 UTF-8
+std::locale::global(std::locale("zh_TW.UTF-8"));
+```
