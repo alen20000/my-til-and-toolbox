@@ -1,17 +1,17 @@
-### 🛠 我的工具箱
+# Tools Box
 
-*   **webp-to-mp4**: 圖片 webp 轉 mp4 影片檔。 (依賴 ffmpeg, python)
-*   **mp4-quickly-merge**: 批量 mp4 合併單一檔案。
-    *   依賴 ffmpeg, python 預設快速合併模式。
-    *   腳本下有另套 CPU 編碼 pattern 可以選擇，但 GPU 調用需再調參數。
-*   **md_list_generator**: 配合 github 表單用的 md 連結格式生成器。
+|File Name| <div align="center">Note.</div>|
+| :---: | :--- |
+|**webp-to-mp4**| 圖片 webp 轉 mp4 影片檔。 (依賴 ffmpeg, python)|
+|**mp4-quickly-merge**| 批量 mp4 合併單一檔案。<br>依賴 ffmpeg, python 預設快速合併模式。<br>腳本下有另套 CPU 編碼 pattern 可以選擇，但 GPU 調用需再調參數。|
+|**md_list_generator**| 配合 github 表單用的 md 連結格式生成器。|
 
-# 💡 TIL (Today I Learned)
+
+
+# TIL (Today I Learned)
 > 個人備忘 & 快速除錯 & 經驗管理 & 第二大腦
 
----
-
-### 📂 Catalogs Index
+##  Catalogs Index
 * [Adobe-cad](#adobe-cad)
 * [Adobe-photoshop](#adobe-photoshop)
 * [Algorithm](#algorithm)
@@ -23,8 +23,9 @@
 * [Flask](#flask)
 * [Syntax](#syntax)
 
----
-### 📄 Pages Index
+
+##  Pages Index
+
 ### adobe-cad
 - [my-cad-note](TIL/graphics/adobe-cad/my-cad-note.md)
 
@@ -37,11 +38,22 @@
 - [QuickSort](TIL/algorithm/QuickSort.md)
 - [TwoPointers](TIL/algorithm/TwoPointers.md)
 
+### c++-Qt
+- [qt-guidline](TIL/ui/c++-Qt/qt-guidline.md)
+
+### cmd
+- [cmd_basic_commands](TIL/shell/cmd/cmd_basic_commands.md)
+
 ### comfyui
 - [comfyui-guide](TIL/ai/ai-art/comfyui/comfyui-guide.md)
 
+### concepts
+- [ckmake](TIL/c++/concepts/ckmake.md)
+- [cpp-basics](TIL/c++/concepts/cpp-basics.md)
+
 ### conda
 - [basic-operation](TIL/conda/basic-operation.md)
+- [basic-command](TIL/env/conda/basic-command.md)
 
 ### data-structures
 - [LinkedList](TIL/data-structures/LinkedList.md)
@@ -56,5 +68,15 @@
 ### flask
 - [Flask](TIL/web-backend/flask/Flask.md)
 
-### syntax
-- [C++SyntaxNotes](TIL/syntax/C++SyntaxNotes.md)
+### snippets
+- [cpp-preprocessor](TIL/c++/snippets/cpp-preprocessor.md)
+- [input](TIL/c++/snippets/input.md)
+- [lambda-and-map](TIL/c++/snippets/lambda-and-map.md)
+
+### virtual-machine
+- [virtual-machine](TIL/virtual-machine/virtual-machine.md)
+
+### yolo
+- [yolo-note](TIL/ai/ai-vision/yolo/yolo-note.md)
+
+
