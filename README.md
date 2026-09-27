@@ -5,24 +5,30 @@
 |**webp-to-mp4**| 圖片 webp 轉 mp4 影片檔。 (依賴 ffmpeg, python)|
 |**mp4-quickly-merge**| 批量 mp4 合併單一檔案。<br>依賴 ffmpeg, python 預設快速合併模式。<br>腳本下有另套 CPU 編碼 pattern 可以選擇，但 GPU 調用需再調參數。|
 |**md_list_generator**| 配合 github 表單用的 md 連結格式生成器。|
+|**downloader-m3u8**| 直接對 m3u8源址做影片下載<br>自動安裝依賴|
 
 
 
 # TIL (Today I Learned)
 > 個人備忘 & 快速除錯 & 經驗管理 & 第二大腦
 
-##  Catalogs Index
+## Catalogs Index
 * [Adobe-cad](#adobe-cad)
 * [Adobe-photoshop](#adobe-photoshop)
 * [Algorithm](#algorithm)
+* [C++-Qt](#c++-qt)
+* [Cmd](#cmd)
 * [Comfyui](#comfyui)
+* [Concepts](#concepts)
 * [Conda](#conda)
 * [Data-structures](#data-structures)
 * [Dev-ops](#dev-ops)
 * [Feature-logic](#feature-logic)
 * [Flask](#flask)
-* [Syntax](#syntax)
-
+* [Shaka-player-sourcebuffer-hook](#shaka-player-sourcebuffer-hook)
+* [Snippets](#snippets)
+* [Virtual-machine](#virtual-machine)
+* [Yolo](#yolo)
 
 ##  Pages Index
 
@@ -68,6 +74,9 @@
 ### flask
 - [Flask](TIL/web-backend/flask/Flask.md)
 
+### shaka-player-sourcebuffer-hook
+- [shaka-player-sourcebuffer-hook](TIL/browser-reverse-engineering/shaka-player-sourcebuffer-hook/shaka-player-sourcebuffer-hook.md)
+
 ### snippets
 - [cpp-preprocessor](TIL/c++/snippets/cpp-preprocessor.md)
 - [input](TIL/c++/snippets/input.md)
@@ -78,5 +87,6 @@
 
 ### yolo
 - [yolo-note](TIL/ai/ai-vision/yolo/yolo-note.md)
+
 
 
