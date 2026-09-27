@@ -15,10 +15,10 @@ OUTPUT_PATH = BASE_DIR / "output"
 
 #   ===== Header設定(依照需求修改)=====
 CUSTOM_HEADERS = {
-    # 'Referer': 'https://missav.ai/',
-    'Origin': 'https://porncvd.com',
+    'Referer': 'https://google.com',
+    'Origin': 'https://google.com',
     'User-Agent': 'Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36',
-    # 'Cookie': 'session_id=xxxxx',  # 需要登入態時再打開
+    # 'Cookie': 'session_id=xxxxx',  # Cookie拓展
 }
 
 #   ===== 依賴安裝地址 ========
