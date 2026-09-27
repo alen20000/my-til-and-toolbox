@@ -6,3 +6,6 @@
 # ===跟目錄例外===
 /md_list_generator.py
 output.txt
+
+# === Folder==
+**/output/

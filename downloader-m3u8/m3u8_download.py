@@ -92,7 +92,7 @@ class DownLoader:
         command = [
             str(DOWNLOADER_PATH),
             m3u8_url,
-            '--save-dir', str(BASE_DIR),
+            '--save-dir', str(OUTPUT_PATH),
             '--save-name', file_name,
         ]
 
