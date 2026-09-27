@@ -24,70 +24,102 @@ CUSTOM_HEADERS = {
 #   ===== 依賴安裝地址 ========
 M3U8D_DWONLOADER_URL = "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.5.1-beta/N_m3u8DL-RE_v0.5.1-beta_win-x64_20251029.zip"
 
+# === 下載器參數 ===
+
+DOWNLOAD_CONFIG = {
+    "thread_count": "16",
+    "auto_select": True,  
+    "del_after_done": True,
+}
 class DownLoader:
     def __init__(self):
-        self.m3u8_url = None
+        pass
 
     def _check_dependencies(self):
-        '''
-        @Breif: 檢查是否有安裝 N_m3u8DL-RE，沒有則自動安裝
+        '''檢查是否有必要依賴 N_m3u8DL-RE
+
+        若檢查發現沒依賴，則自動安裝指定 N_m3u8DL 版本
+
+        Returns: True or False  
         '''
 
         # 路徑&檔案檢查
         if not DOWNLOADER_PATH.exists():
             DOWNLOADER_FOLDER.mkdir(exist_ok=True)
 
-        if not DOWNLOADER_PATH.exists():
-            print("缺失必要依賴，開始自動安裝...")
+        # 如果執行檔已經存在，直接返回
+        if DOWNLOADER_PATH.exists():
+            return True
 
-            import requests
-            import zipfile
-            import io
 
-            try:
-                res = requests.get(M3U8D_DWONLOADER_URL)
-                # 若狀態不對，會跳到最近的excep，或直接報錯。主要是避免抓到空檔案然後還解壓縮
-                res.raise_for_status()
-                # 下載的檔案直接給記憶體，不給實體地址
-                zip_data = io.BytesIO(res.content)
-                # 解壓縮
-                with zipfile.ZipFile(zip_data) as z:
+        print("缺失必要依賴，開始自動安裝...")
 
-                    exe_name = next((f for f in z.namelist() if f.endswith(".exe")), None)
+        import requests
+        import zipfile
+        import io
 
-                    if exe_name:
-                        with open(DOWNLOADER_PATH, "wb") as f:
-                            f.write(z.read(exe_name))
+        try:
+            res = requests.get(M3U8D_DWONLOADER_URL)
+            # 若狀態不對，會跳到最近的excep，或直接報錯。主要是避免抓到空檔案然後還解壓縮
+            res.raise_for_status()
+            # 下載的檔案直接給記憶體，不給實體地址
+            zip_data = io.BytesIO(res.content)
+            # 解壓縮
+            with zipfile.ZipFile(zip_data) as z:
 
-                        return True
-                    else:
-                        raise FileNotFoundError("壓縮檔內找不到執行檔 (.exe)")
-                    
-            except Exception as e:
-                print(f"自動安裝失敗，請手動安裝:{e}")
-                return
+                exe_name = next((f for f in z.namelist() if f.endswith(".exe")), None)
+
+                if exe_name:
+                    with open(DOWNLOADER_PATH, "wb") as f:
+                        f.write(z.read(exe_name))
+
+                    return True
+                else:
+                    raise FileNotFoundError("壓縮檔內找不到執行檔 (.exe)")
+                
+        except Exception as e:
+            print(f"自動安裝失敗，請手動安裝:{e}")
+            return False
             
-    def download_m3u8(self,m3u8_url):
-        pass
-def download_m3u8(m3u8_url,output_path,headers=None):
+    def _download_m3u8(self,m3u8_url,file_name="output_vid"):
+        """組裝 N_m3u8DL-RE 命令列參數並執行 subprocess 下載。
 
-    #N_m3u8DL-RE的命令行參數
-    command = [
-        str(DOWNLOADER_PATH),
-        m3u8_url,  # 輸入 m3u8 URL
-        '--save-dir', str(BASE_DIR),  # 指定下載目錄
-        '--save-name', output_path,  # 指定輸出檔案名稱（不須帶副檔名）
-        '--auto-select', #自動選擇畫質最高的影片流
-        '--del-after-done' ,#下載合併
-        '--thread-count', '16', #提高執行緒，嘗試抓更快，防止遺失造成失效，原本預設為8
+        Args:
+            m3u8_url: 目標影片的 m3u8 串流網址。
+            file_name: 輸出檔案的名稱（不須帶副檔名）。
+        """
+        
+        command = [
+            str(DOWNLOADER_PATH),
+            m3u8_url,
+            '--save-dir', str(BASE_DIR),
+            '--save-name', file_name,
+        ]
 
-    ]
-    subprocess.run(command)
-    if headers:
-        # 如果有自訂 headers，將其轉換為命令行參數
-        for key, value in headers.items():
-            command.extend(['--header', f'{key}: {value}'])
+        # 動態加載設定
+        if DOWNLOAD_CONFIG["auto_select"]:
+            command.append("--auto-select")
+        if DOWNLOAD_CONFIG["del_after_done"]:
+            command.append("--del-after-done")
+
+        # 執行外部命令
+        subprocess.run(command)
+
+    def run(self,url,file_name="output_vid"):
+        '''封裝內部函式
+
+        Args:
+            m3u8_url: 目標影片的 m3u8 串流網址。
+            file_name: 輸出檔案的名稱（不須帶副檔名）。
+        
+        '''
+        if self._check_dependencies():
+            self._download_m3u8(url,file_name)
+            return
+
 
 if __name__ == '__main__':
     dl = DownLoader()
-    dl._check_dependencies()
+    url = input("輸入 m3u8 URL: ")
+    file_name = input("輸出檔案名稱: ").strip() or "output_video"
+    dl.run(url,file_name)
